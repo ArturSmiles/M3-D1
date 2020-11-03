@@ -182,7 +182,10 @@ function findEven(array) {
     return greatestNum
 }
 /* 15)
-Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50. */
+Create a function to check two given numbers and return true if one of the number is 50 or if their sum is 50. 
+
+BROOOOOOOOOOOOOOOOOOOOOOKEN
+*/
 
 /* 16)
 Create a function to check from two given integers, whether one is positive and another one is negative. */
@@ -200,8 +203,20 @@ function checkSign(a, b) {
         return "Both Numbers are Negative"
     }
 }
+
 /* 17)
 Create a function to create new string with first 3 characters are in lower case and the others in upper case. If the string length is less than 3 convert all the characters in upper case.  */
+function upperChar(str) {
+    if(str.length<3){
+        let upchar = str.toUpperCase()
+        return upchar
+    }else{
+        let chars = str.slice(0,3)
+        let string = str.slice(3,str.length)
+        let lowChars = chars.toLowerCase()
+        return lowChars.concat(string)
+    }
+}
 /* 18)
 Create a function to calculate the sum of the two given integers, If the sum is in the range 50..80 return 65 other wise return 80. */
 function sum(a, b) {
@@ -240,3 +255,12 @@ function factor(a) {
 }
 /* 20)
 Create a function that given a phrase returns its acronym, like British Broadcasting Corporation returns BBC */
+
+function getAcronym(str){
+    let words = str.split(" ");
+    let acr = []
+    for(let i =0; i<words.length;i++){
+        acr.push(words[i].charAt(0))
+    }
+    return acr.join("").toUpperCase();
+  };
